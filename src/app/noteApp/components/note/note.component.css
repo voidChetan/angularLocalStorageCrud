@@ -1,0 +1,13 @@
+.right {
+    float: right;
+}
+.fa {
+    top: 10px;
+    position: absolute;
+    right: 24px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.whiteText{
+    color: white !important;
+}

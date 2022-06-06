@@ -1,0 +1,73 @@
+<div class="wrapper" *ngIf="setupObj.Sidebar =='sidebar'"> 
+    <nav id="sidebar" [ngClass]="isOpen?'active':''" [style.background-color]="setupObj.SidebarColor">
+        <div class="sidebar-header" [style.background-color]="setupObj.SidebarColor">
+            <h4>My Note-Pro</h4>
+        </div> 
+        <ul class="list-unstyled components">  
+            <li>
+                <a routerLink="/noteapp">Note</a>
+            </li> 
+            <li>
+                <a routerLink="/setup">Setup</a>
+            </li>
+            <li>
+                <a routerLink="/noteapp">Admin</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li class="text-center">
+                 Version: 1.0
+            </li> 
+        </ul>
+    </nav> 
+    <div id="content"> 
+        <nav class="navbar navbar-expand-lg navbar-light" [style.background-color]="setupObj.SidebarColor">
+            <div class="container-fluid" >
+                <i class="fa fa-bars font-21" aria-hidden="true" (click)="openNav()"></i> 
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button> 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto"> 
+                        <li class="nav-item">
+                            <a class="nav-link text-white pointer" (click)="openNote()" ><i class="fa fa-plus" aria-hidden="true"></i> Add Note</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white pointer" (click)="openFav()" > <i class="fa fa-plus" aria-hidden="true"></i> Add Favorite</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-user-circle-o pr-2" aria-hidden="true"></i> <span>{{loggedUser}}</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid" [style.color]="setupObj.FontColor">
+            <router-outlet></router-outlet>
+        </div> 
+    </div>
+</div>
+<nav class="navbar navbar-expand-md" [style.background-color]="setupObj.SidebarColor" *ngIf="setupObj.Sidebar =='top'">
+    <div class="text-center" style="width: 100%;" id="collapsibleNavbar"> 
+        <div class="row ">
+            <div class="col-md-4 text-right">
+                <a class="nav-link text-white pointer"   (click)="openNote()" ><i class="fa fa-plus" aria-hidden="true"></i> Add Note</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a class="nav-link text-white" routerLink="/noteapp" > <h4>My Note-Pro</h4></a>
+            </div>
+            <div class="col-md-2 text-left">
+                <a class="nav-link text-white pointer" (click)="openFav()" > <i class="fa fa-plus" aria-hidden="true"></i> Add Favorite</a>
+                
+            </div>
+            <div class="col-md-2 text-right text-white"> 
+                <!-- <span routerLink="/setup" class="pointer pr-2"> <i class="fa fa-cogs pr-2" aria-hidden="true"></i>Setup</span> -->
+                <!-- <span> <i class="fa fa-user-circle-o " aria-hidden="true"></i> {{loggedUser}}</span> -->
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid" [style.color]="setupObj.FontColor">
+    <router-outlet></router-outlet>
+</div>

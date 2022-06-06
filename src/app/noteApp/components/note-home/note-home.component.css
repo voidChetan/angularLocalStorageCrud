@@ -1,0 +1,24 @@
+.col-md-4 {
+    padding-top: 10px;
+}
+.col-12 {
+    padding-top: 5px;
+}
+.card-footer {
+    padding: 5px ;
+}
+.card-img-top {
+    height: 140px;
+}
+.new {
+    height: 164px;
+    line-height: 7.5;
+    border: 3px dashed !important;
+}
+.new-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+label {
+    margin: 0;
+}
