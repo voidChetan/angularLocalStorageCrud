@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardComponent } from './card.component';
+import { InlineEditingOneComponent } from './inline-editing-one.component';
 
-describe('CardComponent', () => {
-  let component: CardComponent;
-  let fixture: ComponentFixture<CardComponent>;
+describe('InlineEditingOneComponent', () => {
+  let component: InlineEditingOneComponent;
+  let fixture: ComponentFixture<InlineEditingOneComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardComponent ]
+      declarations: [ InlineEditingOneComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardComponent);
+    fixture = TestBed.createComponent(InlineEditingOneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

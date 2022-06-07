@@ -1,26 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardComponent } from './noteApp/components/card/card.component';
-import { NoteHomeComponent } from './noteApp/components/note-home/note-home.component';
-import { NoteComponent } from './noteApp/components/note/note.component';
-import { SetupComponent } from './noteApp/components/setup/setup.component';
-import { NoteLayoutComponent } from './noteApp/note-layout/note-layout.component';
+import { InlineEditingOneComponent } from './pages/inline-editing-one/inline-editing-one.component';
+import { InlineEditingtwoComponent } from './pages/inline-editingtwo/inline-editingtwo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NoteLayoutComponent,
-    CardComponent,
-    NoteComponent,
-    NoteHomeComponent,
-    SetupComponent
+    InlineEditingOneComponent,
+    InlineEditingtwoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

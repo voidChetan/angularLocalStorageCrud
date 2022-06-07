@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NoteHomeComponent } from './note-home.component';
+import { InlineEditingtwoComponent } from './inline-editingtwo.component';
 
-describe('NoteHomeComponent', () => {
-  let component: NoteHomeComponent;
-  let fixture: ComponentFixture<NoteHomeComponent>;
+describe('InlineEditingtwoComponent', () => {
+  let component: InlineEditingtwoComponent;
+  let fixture: ComponentFixture<InlineEditingtwoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NoteHomeComponent ]
+      declarations: [ InlineEditingtwoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NoteHomeComponent);
+    fixture = TestBed.createComponent(InlineEditingtwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
